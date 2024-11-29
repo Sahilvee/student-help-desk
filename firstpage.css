@@ -1,0 +1,254 @@
+/*code for nav bar*/
+* {
+    margin: 0;
+    padding: 0;
+   
+}
+body{
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255 255 255);
+}
+nav {
+   
+    background:white;
+    box-shadow: 3px 3px 5px  rgba(254, 249, 249, 0.1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: 5px -5px 12px 1px black;
+}
+nav ul{   
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+nav  li {
+    height: 70px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration :none;
+    display: flex;
+    align-items: center;
+    color : black;
+   
+}
+nav a:hover{
+    background-color: #f0f0f0;
+    text-decoration: underline;
+}
+nav li:first-child
+{
+    margin-right: auto;
+}
+ 
+
+.logo{
+    height: 100%;
+    margin-left:40px;
+}
+.sidebar{
+    position: fixed;
+    top :0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(255, 255,255, 0.2);
+    backdrop-filter:blur(10px);
+    display: none;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    box-shadow: -10px 0 10px rgb(0, 0,0,0.1);
+    transition: right 0.3s ease;
+}
+.sidebar li {
+    width: 100%; 
+
+}
+
+.sidebar a:hover{
+   
+    width: 100%;
+    background-color: #7f7b7b1d;
+  
+}
+
+@media(max-width:800px){
+    .hideonmobile{
+        display: none;
+    }
+}
+/*code for nav bar end*/
+/* code for first text in web page*/
+.info{
+
+    width: 50vw;
+    height: 40vh;
+    position: relative;
+    top:7vh;
+    left:10vw;
+}
+.info p{
+    margin-top:20px;
+    font-size:150%;
+}
+.info h1{
+    color:rgb(105, 10, 105);
+    font-size: 5vh;
+    font-weight: bold;
+    text-shadow: 5px 5px 2px 0px rgb(0, 9, 128);
+}
+/* code for first text in web page emd*/
+/*code for the card*/ 
+.card {
+   position: relative;
+   left :40%;
+    width: 230px;
+    border-radius: 20px;
+    background: #1b233d;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card .top-section {
+    height: 150px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(45deg, rgb(4, 159, 187) 0%, rgb(80, 246, 255) 100%);
+    position: relative;
+  }
+  
+  .card .top-section .border {
+    border-bottom-right-radius: 10px;
+    height: 30px;
+    width: 130px;
+    background: white;
+    background: #1b233d;
+    position: relative;
+    transform: skew(-40deg);
+    box-shadow: -10px -10px 0 0 #1b233d;
+  }
+  
+  .card .top-section .border::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: -15px;
+    background: rgba(255, 255, 255, 0);
+    border-top-left-radius: 10px;
+    box-shadow: -5px -5px 0 2px #1b233d;
+  }
+  
+  .card .top-section::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+    height: 15px;
+    width: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: -5px -5px 0 2px #1b233d;
+  }
+  
+  .card .top-section .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .card .top-section .icons .logo {
+    height: 100%;
+    aspect-ratio: 1;
+    padding: 7px 0 7px 15px;
+  }
+  
+  .card .top-section .icons .logo .top-section {
+    height: 100%;
+  }
+  
+  .card .top-section .icons .social-media {
+    height: 100%;
+    padding: 8px 15px;
+    display: flex;
+    gap: 7px;
+  }
+  
+  .card .top-section .icons .social-media .svg {
+    height: 100%;
+    fill: #1b233d;
+  }
+  
+  .card .top-section .icons .social-media .svg:hover {
+    fill: white;
+  }
+  
+  .card .bottom-section {
+    margin-top: 15px;
+    padding: 10px 5px;
+  }
+  
+  .card .bottom-section .title {
+    
+    display: block;
+    font-size: 17px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  
+  .card .bottom-section .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .card .bottom-section .row .item {
+    flex: 30%;
+    text-align: center;
+    padding: 5px;
+    color: rgba(170, 222, 243, 0.721);
+  }
+  
+  .card .bottom-section .row .item .big-text {
+    font-size: 12px;
+    display: block;
+  }
+  
+  .card .bottom-section .row .item .regular-text {
+    font-size: 9px;
+  }
+  
+  .card .bottom-section .row .item:nth-child(2) {
+    border-left: 1px solid rgba(255, 255, 255, 0.126);
+    border-right: 1px solid rgba(255, 255, 255, 0.126);
+  }
+  .card .bottom-section .title a {
+    color: white; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .card .bottom-section .title a:hover {
+    text-decoration: underline; /* Optional: add underline on hover */
+  }
+  /*code for the card end*/
